@@ -1,0 +1,37 @@
+/*
+ * created from http://css-tricks.com/examples/ButtonMaker/#
+ */
+
+
+
+.button {
+   border-top: 1px solid #f79797;
+   background: #d66565;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ff0004), to(#d66565));
+   background: -webkit-linear-gradient(top, #ff0004, #d66565);
+   background: -moz-linear-gradient(top, #ff0004, #d66565);
+   background: -ms-linear-gradient(top, #ff0004, #d66565);
+   background: -o-linear-gradient(top, #ff0004, #d66565);
+   padding: 11px 22px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 24px;
+   font-family: Georgia, Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #3cb500;
+   background: #3cb500;
+   color: #fff;
+   }
+.button:active {
+   border-top-color: #5c1b1b;
+   background: #5c1b1b;
+   }
