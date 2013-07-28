@@ -1,0 +1,28 @@
+//--------------------------------------------
+// BITS, DEFAULTS, VARIABLES, INCLUDES, MIXINS
+//--------------------------------------------
+
+/* INCLUDES */
+@import "compass";
+@import "normalize";
+
+
+
+
+
+
+/* VARIABLES */
+
+
+
+
+
+/* MIXINS */
+@mixin font-stack-header {
+  font-family: "jaf-peacock-short",sans-serif;
+}
+
+@mixin font-stack-body {
+ font-family: "jaf-bernina-sans",sans-serif; 
+}
+

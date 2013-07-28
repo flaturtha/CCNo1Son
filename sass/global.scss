@@ -1,0 +1,24 @@
+//--------------------------------------------
+// GLOBAL STYLES (imports only)
+//--------------------------------------------
+
+@import "_partials/_bits";
+
+/* DEFAULTS */
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  @include font-stack-body;
+  margin: 1rem;
+  font: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include font-stack-header;
+  em {
+    font-size: 66%;
+    color: #999;
+  }
+}
