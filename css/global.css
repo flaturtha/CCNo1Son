@@ -443,6 +443,12 @@ table {
         }
     }
  */
+/* line 85, ../sass/_partials/_SuperSimpleGridSystem.scss */
+.logo, .lede {
+  display: block;
+  float: left;
+  padding-left: 1.5em; }
+
 /**
  * One of the most cumbersome things with traditional grid system is their use of
  * classes like `.end`, `.omega` or the like in order to remove the gutter at the start
@@ -467,7 +473,7 @@ table {
  */
 /* line 148, ../sass/_partials/_SuperSimpleGridSystem.scss */
 .grid {
-  margin-left: -1.25em; }
+  margin-left: -1.5em; }
 
 /*
  * created from http://css-tricks.com/examples/ButtonMaker/#
@@ -517,165 +523,135 @@ table {
   box-sizing: border-box; }
 
 /* line 12, ../sass/global.scss */
-body {
+html {
+  font: 87.5%/1.5;
   font-family: "jaf-bernina-sans",sans-serif;
-  background: #222222;
-  border-top: 5px solid red;
-  font: 100%; }
+  color: blue;
+  background-color: #222222; }
+  @media (min-width: 30em) {
+    /* line 12, ../sass/global.scss */
+    html {
+      font-size: 100%; } }
+  @media (min-width: 50em) {
+    /* line 12, ../sass/global.scss */
+    html {
+      font-size: 112.5%; } }
+  @media (min-width: 70em) {
+    /* line 12, ../sass/global.scss */
+    html {
+      font-size: 125%; } }
 
-/* line 21, ../sass/global.scss */
+/* line 37, ../sass/global.scss */
+body {
+  border-top: 5px solid red; }
+
+/* line 41, ../sass/global.scss */
 .wrapper {
   width: 100%; }
   @media screen and (min-width: 768px) {
-    /* line 21, ../sass/global.scss */
+    /* line 41, ../sass/global.scss */
     .wrapper {
       width: 960px;
       margin: 0 auto; } }
 
-/* line 29, ../sass/global.scss */
+/* line 49, ../sass/global.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "jaf-bernina-sans-condensed",sans-serif;
   color: white; }
 
-/* line 34, ../sass/global.scss */
+/* line 54, ../sass/global.scss */
 h1 {
   font-size: 2rem; }
 
-/* line 38, ../sass/global.scss */
+/* line 58, ../sass/global.scss */
 .logo {
   background: #222;
   padding: 1.5rem 0;
   text-align: center; }
 
-/* line 44, ../sass/global.scss */
+/* line 64, ../sass/global.scss */
 p {
   font-size: 0.8rem;
   color: white; }
   @media screen and (min-width: 768px) {
-    /* line 44, ../sass/global.scss */
+    /* line 64, ../sass/global.scss */
     p {
       font-size: 1rem; } }
 
 /* UTILITY CLASSES */
-/* line 53, ../sass/global.scss */
+/* line 73, ../sass/global.scss */
 .center {
   text-align: center; }
 
-/* GRID */
-/* line 59, ../sass/global.scss */
-.grid {
-  margin: 0 0 1.5rem 0; }
-  /* line 61, ../sass/global.scss */
-  .grid:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-/* line 69, ../sass/global.scss */
-[class*='col-'] {
-  padding-right: 1.5rem; }
-  /* line 72, ../sass/global.scss */
-  .grid [class*='col-']:last-of-type {
-    padding-right: none; }
-
-/* line 77, ../sass/global.scss */
-.col-3-3 {
-  width: 100%; }
-
-/* line 80, ../sass/global.scss */
-.col-2-3 {
-  width: 66.66%; }
-
-/* line 83, ../sass/global.scss */
-.col-1-3 {
-  width: 33.33%; }
-
-/* line 86, ../sass/global.scss */
-.col-1-2 {
-  width: 50%; }
-
-/* line 89, ../sass/global.scss */
-.col-1-4 {
-  width: 25%; }
-
-/* line 92, ../sass/global.scss */
-.col-1-8 {
-  width: 12.5%; }
-
-/* line 95, ../sass/global.scss */
-.module {
-  padding: 1.5rem;
-  background: #eee; }
-
 /* GENERAL STYLES */
-/* line 102, ../sass/global.scss */
-.mastheadIMG {
-  background: #222;
-  margin: 1rem auto -1rem;
-  text-align: center; }
+/* line 78, ../sass/global.scss */
+.logo {
+  margin: 0 auto;
+  width: 83.333%; }
+  @media (min-width: 30em) {
+    /* line 78, ../sass/global.scss */
+    .logo {
+      width: 66.666%; } }
 
-/* line 108, ../sass/global.scss */
+/* line 93, ../sass/global.scss */
+.opening {
+  display: none; }
+  /* line 96, ../sass/global.scss */
+  .opening h2 {
+    padding: 0.25rem;
+    color: red; }
+  @media (min-width: 30em) {
+    /* line 93, ../sass/global.scss */
+    .opening {
+      width: 33.333%;
+      background: url(../img/openingstar.png) no-repeat top right;
+      float: right; } }
+
+/* line 109, ../sass/global.scss */
 .lede {
-  margin: -1rem 0 -1rem 1.5rem;
-  padding: 1.5rem; }
-  /* line 111, ../sass/global.scss */
+  width: 100%;
+  margin: 0 0 0 2.25rem;
+  overflow: hidden;
+  *zoom: 1; }
+  /* line 115, ../sass/global.scss */
   .lede h1 {
     font-size: 1.25rem;
     font-family: "jaf-bernina-sans",sans-serif;
     font-weight: 300; }
     @media screen and (min-width: 768px) {
-      /* line 111, ../sass/global.scss */
+      /* line 115, ../sass/global.scss */
       .lede h1 {
         text-align: center;
         font-size: 3rem; } }
-    /* line 119, ../sass/global.scss */
+    /* line 123, ../sass/global.scss */
     .lede h1 span {
       margin: 0.5rem auto;
       color: yellow; }
 
-/* line 126, ../sass/global.scss */
+/* line 130, ../sass/global.scss */
 .intro {
   background: red;
   color: #fff;
   margin: 1rem 0;
   padding: 1.5rem 0;
   box-shadow: inset 0 7px 10px rgba(0, 0, 0, 0.4); }
-  /* line 132, ../sass/global.scss */
+  /* line 136, ../sass/global.scss */
   .intro ul li {
     padding-bottom: 1.5rem; }
 
-/* line 137, ../sass/global.scss */
+/* line 141, ../sass/global.scss */
 .content {
   margin: 0 1rem; }
 
-/* line 142, ../sass/global.scss */
+/* line 146, ../sass/global.scss */
 .offer-nav {
   padding: 1.5rem;
   text-align: center; }
 
-/* line 148, ../sass/global.scss */
-.opening {
-  display: none;
-  text-align: center;
-  width: 100%; }
-  /* line 152, ../sass/global.scss */
-  .opening h2 {
-    padding: 0.25rem;
-    background: yellow;
-    color: red; }
-  @media screen and (min-width: 720px) {
-    /* line 148, ../sass/global.scss */
-    .opening {
-      background: url(../img/openingstar.png) no-repeat top right;
-      float: right; }
-      /* line 160, ../sass/global.scss */
-      .opening h2 {
-        display: none; } }
-
-/* line 170, ../sass/global.scss */
+/* line 158, ../sass/global.scss */
 footer {
   background: black; }
-  /* line 172, ../sass/global.scss */
+  /* line 160, ../sass/global.scss */
   footer p {
     font-size: 0.9rem;
     color: #666;
