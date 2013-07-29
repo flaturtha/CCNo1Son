@@ -144,6 +144,29 @@ p {
   text-align: center;
 }
 
+
+.opening {
+  display: none;
+  text-align: center;
+  width: 100%;
+  h2 {
+    padding: 0.25rem;
+    background: yellow /* some big star image */;
+    color: red;
+  }
+  @media screen and (min-width: 720px) {
+    background: url(../img/openingstar.png) no-repeat top right;
+    float: right;
+    h2 {
+      display: none;
+    }
+  }
+}
+
+
+
+
+
 footer {
   background: black;
   p {

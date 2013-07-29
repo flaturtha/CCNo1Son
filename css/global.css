@@ -368,6 +368,107 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/**
+ * Columns in SSGS rely on `box-sizing: border-box;` in order to work properly.
+ * It is considered good practice to just apply the 'correct' box-sizing to all
+ * elements, even by people like Paul Irish.
+ * (see: http://paulirish.com/2012/box-sizing-border-box-ftw/)
+ *
+ * Without Compass:
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ *
+ * With Compass:
+    @import "compass/css3/box-sizing";
+    @include box-sizing(border-box);
+ */
+/**
+ * $gutters is the only variable you'll ever need to set yourself. Use whatever
+ * kind of value you want, be it px, em, rem or even percentages (allthough that would)
+ * really miss the whole point of SSGS.
+ */
+/**
+ * SSGS uses floats to do the heavy lifting with the layout so there needs to be a
+ * clearfix. The one that's worked best for me is Nicolas Gallagher's `Micro Clearfix`
+ * hack. It is included below. If you already have a clearfix in place, feel free to
+ * remove it, but be sure to change the `@extend` rule inside `.grid`.
+ * (see: http://nicolasgallagher.com/micro-clearfix-hack/)
+ */
+/* line 33, ../sass/_partials/_SuperSimpleGridSystem.scss */
+.grid {
+  *zoom: 1; }
+  /* line 37, ../sass/_partials/_SuperSimpleGridSystem.scss */
+  .grid::before, .grid::after {
+    content: " ";
+    display: table; }
+  /* line 42, ../sass/_partials/_SuperSimpleGridSystem.scss */
+  .grid::after {
+    clear: both; }
+
+/**
+ * With SSGS, you define grid columns in your CSS using mixins. It's quite a great
+ * thing as it removes the dependency on all those classes in your HTML.
+ *
+ * Example:
+    .item {
+        @include grid-col("one half"); // Equivalent to `grid-col("1/2")`.
+    }
+ *
+ * You could also change SSGS by mapping the mixins to classes.
+ *
+ * Example:
+    .one-half {
+        @include grid-col("one half");
+    }
+ *
+ * Still, it's prefferable to work with the mixins directly in your CSS as it allows
+ * easy changes of the column count to enable a fully responsive grid. The following
+ * example shows a typical mobile-first grid (i.e. 1-2-3-4 columns).
+ *
+ * Example:
+    .item {
+        @include grid-col;
+
+        @media (min-width: 30em) {
+            @include grid-col("one half");
+        }
+
+        @media (min-width: 40em) {
+            @include grid-col("one third");
+        }
+
+        @media (min-width: 50em) {
+            @include grid-col("one quarter");
+        }
+    }
+ */
+/**
+ * One of the most cumbersome things with traditional grid system is their use of
+ * classes like `.end`, `.omega` or the like in order to remove the gutter at the start
+ * or the end of a row. With SSGS this is not necessary anymore, yay! Allthough you don't
+ * need to add the .grid class to your HTML, I think it's the preferrable way, as it makes
+ * the basic structure much more easily visible. However, feel free to just @extend the
+ * class from within your SCSS.
+ *
+ * Example:
+    <div class="grid">
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    .item {
+        @include grid-col("one half");
+    }
+ *
+ * Note: Don't apply things like backgrounds or borders to the columns themselves.
+ * It's neither good practice (use grids only for layout, not for styling) nor will
+ * it work with SGSS. Use an element inside the column to do those things.
+ */
+/* line 148, ../sass/_partials/_SuperSimpleGridSystem.scss */
+.grid {
+  margin-left: -1.5em; }
+
 /*
  * created from http://css-tricks.com/examples/ButtonMaker/#
  */
@@ -443,7 +544,7 @@ h1 {
 /* line 38, ../sass/global.scss */
 .logo {
   background: #222;
-  padding: 0.625rem 0;
+  padding: 1.5rem 0;
   text-align: center; }
 
 /* line 44, ../sass/global.scss */
@@ -463,7 +564,7 @@ p {
 /* GRID */
 /* line 59, ../sass/global.scss */
 .grid {
-  margin: 0 0 0.625rem 0; }
+  margin: 0 0 1.5rem 0; }
   /* line 61, ../sass/global.scss */
   .grid:after {
     content: "";
@@ -472,7 +573,7 @@ p {
 
 /* line 69, ../sass/global.scss */
 [class*='col-'] {
-  padding-right: 0.625rem; }
+  padding-right: 1.5rem; }
   /* line 72, ../sass/global.scss */
   .grid [class*='col-']:last-of-type {
     padding-right: none; }
@@ -503,7 +604,7 @@ p {
 
 /* line 95, ../sass/global.scss */
 .module {
-  padding: 0.625rem;
+  padding: 1.5rem;
   background: #eee; }
 
 /* GENERAL STYLES */
@@ -516,7 +617,7 @@ p {
 /* line 108, ../sass/global.scss */
 .lede {
   margin: -1rem 0 -1rem 1.5rem;
-  padding: 0.625rem; }
+  padding: 1.5rem; }
   /* line 111, ../sass/global.scss */
   .lede h1 {
     font-size: 1.25rem;
@@ -537,11 +638,11 @@ p {
   background: red;
   color: #fff;
   margin: 1rem 0;
-  padding: 0.625rem 0;
+  padding: 1.5rem 0;
   box-shadow: inset 0 7px 10px rgba(0, 0, 0, 0.4); }
   /* line 132, ../sass/global.scss */
   .intro ul li {
-    padding-bottom: 0.625rem; }
+    padding-bottom: 1.5rem; }
 
 /* line 137, ../sass/global.scss */
 .content {
@@ -549,15 +650,34 @@ p {
 
 /* line 142, ../sass/global.scss */
 .offer-nav {
-  padding: 0.625rem;
+  padding: 1.5rem;
   text-align: center; }
 
-/* line 147, ../sass/global.scss */
+/* line 148, ../sass/global.scss */
+.opening {
+  display: none;
+  text-align: center;
+  width: 100%; }
+  /* line 152, ../sass/global.scss */
+  .opening h2 {
+    padding: 0.25rem;
+    background: yellow;
+    color: red; }
+  @media screen and (min-width: 720px) {
+    /* line 148, ../sass/global.scss */
+    .opening {
+      background: url(../img/openingstar.png) no-repeat top right;
+      float: right; }
+      /* line 160, ../sass/global.scss */
+      .opening h2 {
+        display: none; } }
+
+/* line 170, ../sass/global.scss */
 footer {
   background: black; }
-  /* line 149, ../sass/global.scss */
+  /* line 172, ../sass/global.scss */
   footer p {
     font-size: 0.9rem;
     color: #666;
-    padding: 0.625rem;
+    padding: 1.5rem;
     text-align: center; }

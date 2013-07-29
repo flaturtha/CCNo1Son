@@ -5,14 +5,12 @@
 /* IMPORTS */
 @import "compass";
 @import "normalize";
+@import "SuperSimpleGridSystem";
 @import "button1";
 
 /* DEFAULTS */
-$gutter: 0.625rem;
+$gutter: 1.5rem;
 $padding: $gutter;
-
-
-
 
 
 /* VARIABLES */
