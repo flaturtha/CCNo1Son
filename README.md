@@ -10,7 +10,7 @@ The CharlieChan repo on the TalesofMurder.com site is a static rendition to sort
 
 ### Site Structure Outline
 
-1.  body: full width
+1.  body: full width  return
 1.1.  divs for scroll/fade background image
 
 2.  header: full width = 100% of browser window
