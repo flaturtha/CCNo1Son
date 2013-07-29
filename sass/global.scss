@@ -9,65 +9,23 @@
   @include box-sizing(border-box);
 }
 
-html {
-  font: 87.5%/1.5;
-  @include font-stack-body;
-  color: blue;
-  background-color: $bg-color;
-
-  // 480px
-  @media (min-width: 30em) {
-    font-size: 100%;
-    // line-height: 1.6;
-  }
-
-  // 800px
-  @media (min-width: 50em) {
-    font-size: 112.5%;
-    // line-height: 1.7;
-  }
-
-  // 1120px
-  @media (min-width: 70em) {
-    font-size: 125%;
-    // line-height: 1.8;
-  }
+html, body {
 }
 
 body {
-  border-top: 5px solid red;
-}
-
-.wrapper {
   width: 100%;
-  @media screen and (min-width: 768px) {
-    width: 960px;
-    margin: 0 auto; 
-  }  
-}
-
-h1, h2, h3, h4, h5, h6 {
-  @include font-stack-header;
-  color: $Cheader;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-.logo {
-  background: #222;
-  padding: $padding 0;
-  text-align: center;
-}
-
-p {
-  font-size: 0.8rem;
-  color: $Cbody;
-  @media screen and (min-width: 768px) {
-    font-size: 1rem;
+  border-top: 5px solid $accent1;
+  background-color: $bg-color;
+  p {
+    color: $Cbody;
   }
 }
+
+.wrap {
+  max-width: 62rem;
+  margin: 0 auto;
+}
+
 
 /* UTILITY CLASSES */
 .center {
@@ -76,105 +34,46 @@ p {
 
 /* GENERAL STYLES */
 .logo {
-  margin: 0 auto;
-  // border: 1px solid green;
-  @include grid-col ("five sixth");
-  
-  @media (min-width: 30em) {
-    @include grid-col ("two thirds");
-  }
-}
-
-.mastheadIMG {
-  
+  margin: 1rem 0
 }
 
 
-.opening {
-  // border: 1px solid green;
-  display: none;
-  h2 {
-    padding: 0.25rem;
-    // background: yellow /* some big star image */;
-    color: red;
-  }
-  @media (min-width: 30em) {
-    @include grid-col ("one third");
-    background: url(../img/openingstar.png) no-repeat top right;
-    float: right;
-  }
-}
 
-
-.lede {
-  // border: 1px solid green;
-  @include grid-col;
-  margin: 0 0 0 2.25rem;
-  @include clearfix;
-  // padding: $padding;
-  h1 {
-    font-size: 1.25rem;
-    @include font-stack-body;
-    font-weight: 300;
-    @media screen and (min-width: 768px) {
-        text-align: center;
-        font-size: 3rem;
-      }
-    span {
-      margin: 0.5rem auto;
-      color: $accent2;
-    }
-  }
-}
+/* intro */
 
 .intro {
   background: $accent1;
   color: #fff;
-  margin: 1rem 0;
-  padding: $padding 0;
-  box-shadow: inset 0 7px 10px rgba(black, 0.4);
-  ul li {
-    padding-bottom: $padding;
+  margin: 60px 0;
+  padding: 1rem;
+  box-shadow: inset 0 3px 10px rgba(0,0,0,.4);
+}
+
+.intro .content {
+  padding: 0px 0;
+}
+
+.intro h4 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 20px;
+  text-shadow: 0 1px 3px rgba(0,0,0,.8);
+}
+
+.intro .code {
+  font-size: 12px;
+  display: block;
+  margin: 0 0 -30px;
+}
+
+@media (min-width: 768px){
+  .intro .code {
+    font-size: 18px;
+    margin: -30px 0;
+    float: right;
   }
-}
-
-.content {
-  margin: 0 1rem;
-  // border: 1px solid white;
-}
-
-.offer-nav {
-  padding: $padding;
-  text-align: center;
-}
-
-
-
-
-
-
-
-
-footer {
-  background: black;
-  p {
-    font-size: 0.9rem;
-    color: #666;
-    padding: $padding;
+  .intro h4 {
+    margin: 50px 0 0;
     text-align: center;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

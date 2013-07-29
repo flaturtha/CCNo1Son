@@ -443,12 +443,6 @@ table {
         }
     }
  */
-/* line 85, ../sass/_partials/_SuperSimpleGridSystem.scss */
-.logo, .lede {
-  display: block;
-  float: left;
-  padding-left: 1.5em; }
-
 /**
  * One of the most cumbersome things with traditional grid system is their use of
  * classes like `.end`, `.omega` or the like in order to remove the gutter at the start
@@ -522,138 +516,64 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 12, ../sass/global.scss */
-html {
-  font: 87.5%/1.5;
-  font-family: "jaf-bernina-sans",sans-serif;
-  color: blue;
-  background-color: #222222; }
-  @media (min-width: 30em) {
-    /* line 12, ../sass/global.scss */
-    html {
-      font-size: 100%; } }
-  @media (min-width: 50em) {
-    /* line 12, ../sass/global.scss */
-    html {
-      font-size: 112.5%; } }
-  @media (min-width: 70em) {
-    /* line 12, ../sass/global.scss */
-    html {
-      font-size: 125%; } }
-
-/* line 37, ../sass/global.scss */
+/* line 15, ../sass/global.scss */
 body {
-  border-top: 5px solid red; }
+  width: 100%;
+  border-top: 5px solid red;
+  background-color: #222222; }
+  /* line 19, ../sass/global.scss */
+  body p {
+    color: white; }
 
-/* line 41, ../sass/global.scss */
-.wrapper {
-  width: 100%; }
-  @media screen and (min-width: 768px) {
-    /* line 41, ../sass/global.scss */
-    .wrapper {
-      width: 960px;
-      margin: 0 auto; } }
-
-/* line 49, ../sass/global.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "jaf-bernina-sans-condensed",sans-serif;
-  color: white; }
-
-/* line 54, ../sass/global.scss */
-h1 {
-  font-size: 2rem; }
-
-/* line 58, ../sass/global.scss */
-.logo {
-  background: #222;
-  padding: 1.5rem 0;
-  text-align: center; }
-
-/* line 64, ../sass/global.scss */
-p {
-  font-size: 0.8rem;
-  color: white; }
-  @media screen and (min-width: 768px) {
-    /* line 64, ../sass/global.scss */
-    p {
-      font-size: 1rem; } }
+/* line 24, ../sass/global.scss */
+.wrap {
+  max-width: 62rem;
+  margin: 0 auto; }
 
 /* UTILITY CLASSES */
-/* line 73, ../sass/global.scss */
+/* line 31, ../sass/global.scss */
 .center {
   text-align: center; }
 
 /* GENERAL STYLES */
-/* line 78, ../sass/global.scss */
+/* line 36, ../sass/global.scss */
 .logo {
-  margin: 0 auto;
-  width: 83.333%; }
-  @media (min-width: 30em) {
-    /* line 78, ../sass/global.scss */
-    .logo {
-      width: 66.666%; } }
+  margin: 1rem 0; }
 
-/* line 93, ../sass/global.scss */
-.opening {
-  display: none; }
-  /* line 96, ../sass/global.scss */
-  .opening h2 {
-    padding: 0.25rem;
-    color: red; }
-  @media (min-width: 30em) {
-    /* line 93, ../sass/global.scss */
-    .opening {
-      width: 33.333%;
-      background: url(../img/openingstar.png) no-repeat top right;
-      float: right; } }
-
-/* line 109, ../sass/global.scss */
-.lede {
-  width: 100%;
-  margin: 0 0 0 2.25rem;
-  overflow: hidden;
-  *zoom: 1; }
-  /* line 115, ../sass/global.scss */
-  .lede h1 {
-    font-size: 1.25rem;
-    font-family: "jaf-bernina-sans",sans-serif;
-    font-weight: 300; }
-    @media screen and (min-width: 768px) {
-      /* line 115, ../sass/global.scss */
-      .lede h1 {
-        text-align: center;
-        font-size: 3rem; } }
-    /* line 123, ../sass/global.scss */
-    .lede h1 span {
-      margin: 0.5rem auto;
-      color: yellow; }
-
-/* line 130, ../sass/global.scss */
+/* intro */
+/* line 44, ../sass/global.scss */
 .intro {
   background: red;
   color: #fff;
-  margin: 1rem 0;
-  padding: 1.5rem 0;
-  box-shadow: inset 0 7px 10px rgba(0, 0, 0, 0.4); }
-  /* line 136, ../sass/global.scss */
-  .intro ul li {
-    padding-bottom: 1.5rem; }
+  margin: 60px 0;
+  padding: 1rem;
+  box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.4); }
 
-/* line 141, ../sass/global.scss */
-.content {
-  margin: 0 1rem; }
+/* line 52, ../sass/global.scss */
+.intro .content {
+  padding: 0px 0; }
 
-/* line 146, ../sass/global.scss */
-.offer-nav {
-  padding: 1.5rem;
-  text-align: center; }
+/* line 56, ../sass/global.scss */
+.intro h4 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 20px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); }
 
-/* line 158, ../sass/global.scss */
-footer {
-  background: black; }
-  /* line 160, ../sass/global.scss */
-  footer p {
-    font-size: 0.9rem;
-    color: #666;
-    padding: 1.5rem;
-    text-align: center; }
+/* line 63, ../sass/global.scss */
+.intro .code {
+  font-size: 12px;
+  display: block;
+  margin: 0 0 -30px; }
+
+@media (min-width: 768px) {
+  /* line 70, ../sass/global.scss */
+  .intro .code {
+    font-size: 18px;
+    margin: -30px 0;
+    float: right; }
+
+  /* line 75, ../sass/global.scss */
+  .intro h4 {
+    margin: 50px 0 0;
+    text-align: center; } }
