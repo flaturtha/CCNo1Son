@@ -537,102 +537,123 @@ body {
 section {
   width: 100%; }
 
-/* line 44, ../sass/global.scss */
-[class*='-wrap'], .main, .info {
-  max-width: 60rem;
-  margin: 0 auto; }
+@media (min-width: 45rem) {
+  /* line 44, ../sass/global.scss */
+  [class*='-wrap'], .main, .info {
+    max-width: 60rem;
+    margin: 0 auto; } }
 
-/* line 52, ../sass/global.scss */
+/* line 54, ../sass/global.scss */
 .header-wrap .logo {
   text-align: center;
   margin: 1rem 0; }
 
-/* line 60, ../sass/global.scss */
+/* line 62, ../sass/global.scss */
 .lede-wrap p, .lede-wrap body h1, body .lede-wrap h1, .lede-wrap body h2, body .lede-wrap h2, .lede-wrap body h3, body .lede-wrap h3, .lede-wrap body h4, body .lede-wrap h4, .lede-wrap body h5, body .lede-wrap h5, .lede-wrap body h6, body .lede-wrap h6, .lede-wrap body ul li, body ul .lede-wrap li {
   font-family: "jaf-bernina-sans-condensed",sans-serif;
   font-size: 1.65rem;
   line-height: 1.25;
   margin: 0 0 0 1.45rem; }
   @media (min-width: 45rem) {
-    /* line 60, ../sass/global.scss */
+    /* line 62, ../sass/global.scss */
     .lede-wrap p, .lede-wrap body h1, body .lede-wrap h1, .lede-wrap body h2, body .lede-wrap h2, .lede-wrap body h3, body .lede-wrap h3, .lede-wrap body h4, body .lede-wrap h4, .lede-wrap body h5, body .lede-wrap h5, .lede-wrap body h6, body .lede-wrap h6, .lede-wrap body ul li, body ul .lede-wrap li {
       font-size: 4rem;
       line-height: 1.15;
       margin: 0 0 0 3rem; } }
-  /* line 71, ../sass/global.scss */
+  /* line 73, ../sass/global.scss */
   .lede-wrap p span, .lede-wrap body h1 span, body .lede-wrap h1 span, .lede-wrap body h2 span, body .lede-wrap h2 span, .lede-wrap body h3 span, body .lede-wrap h3 span, .lede-wrap body h4 span, body .lede-wrap h4 span, .lede-wrap body h5 span, body .lede-wrap h5 span, .lede-wrap body h6 span, body .lede-wrap h6 span, .lede-wrap body ul li span, body ul .lede-wrap li span {
     color: yellow; }
 
-/* line 77, ../sass/global.scss */
+/* line 79, ../sass/global.scss */
 .query {
   background: red;
   box-shadow: inset 0 7px 10px rgba(0, 0, 0, 0.4);
   margin-top: 1rem; }
 
-/* line 83, ../sass/global.scss */
+/* line 85, ../sass/global.scss */
 .query-wrap {
   padding-bottom: 0.5rem; }
-  /* line 86, ../sass/global.scss */
+  /* line 88, ../sass/global.scss */
   .query-wrap h2 {
     font-size: 2rem;
     padding: 0.5rem 0 0 0; }
-  /* line 90, ../sass/global.scss */
+  /* line 92, ../sass/global.scss */
   .query-wrap ul li {
-    width: 95%;
+    width: 85%;
     font-size: 1.125rem;
     margin: 0 0 1rem 0; }
   @media (min-width: 45rem) {
-    /* line 96, ../sass/global.scss */
+    /* line 98, ../sass/global.scss */
     .query-wrap ul {
-      width: 80%;
-      margin: 0 auto; }
-    /* line 100, ../sass/global.scss */
+      margin: 0 auto;
+      padding: 0 0 0 6rem; }
+    /* line 103, ../sass/global.scss */
     .query-wrap ul li {
+      width: 100%;
       font-size: 1.5rem; } }
 
-/* line 108, ../sass/global.scss */
+/* line 111, ../sass/global.scss */
 .main {
   font-family: "jaf-bernina-sans",sans-serif; }
 
-/* line 113, ../sass/global.scss */
-.setup {
+/* line 116, ../sass/global.scss */
+.setup, .takedown {
   font-size: 90%;
-  padding: 1rem; }
-  /* line 116, ../sass/global.scss */
-  .setup h3 {
+  padding: 1rem 2rem 1rem 1rem; }
+  /* line 123, ../sass/global.scss */
+  .setup h3, .takedown h3 {
     font-size: 1.5rem;
     color: yellow; }
-  /* line 121, ../sass/global.scss */
-  .setup p:first-of-type:first-line, .setup body h1:first-of-type:first-line, body .setup h1:first-of-type:first-line, .setup body h2:first-of-type:first-line, body .setup h2:first-of-type:first-line, .setup body h3:first-of-type:first-line, body .setup h3:first-of-type:first-line, .setup body h4:first-of-type:first-line, body .setup h4:first-of-type:first-line, .setup body h5:first-of-type:first-line, body .setup h5:first-of-type:first-line, .setup body h6:first-of-type:first-line, body .setup h6:first-of-type:first-line, .setup body ul li:first-of-type:first-line, body ul .setup li:first-of-type:first-line {
-    font-size: 150%;
-    font-weight: 600; }
+  /* line 127, ../sass/global.scss */
+  .setup span, .takedown span {
+    color: red;
+    letter-spacing: 0.2rem;
+    font-variant: small-caps;
+    font-weight: 700;
+    padding: 0 0.25rem; }
   @media (min-width: 45rem) {
-    /* line 113, ../sass/global.scss */
-    .setup {
+    /* line 116, ../sass/global.scss */
+    .setup, .takedown {
       max-width: 38rem;
       margin: 0 auto; }
-      /* line 130, ../sass/global.scss */
-      .setup p, .setup body h1, body .setup h1, .setup body h2, body .setup h2, .setup body h3, body .setup h3, .setup body h4, body .setup h4, .setup body h5, body .setup h5, .setup body h6, body .setup h6, .setup body ul li, body ul .setup li {
+      /* line 137, ../sass/global.scss */
+      .setup p, .takedown p, .setup body h1, body .setup h1, .takedown body h1, body .takedown h1, .setup body h2, body .setup h2, .takedown body h2, body .takedown h2, .setup body h3, body .setup h3, .takedown body h3, body .takedown h3, .setup body h4, body .setup h4, .takedown body h4, body .takedown h4, .setup body h5, body .setup h5, .takedown body h5, body .takedown h5, .setup body h6, body .setup h6, .takedown body h6, body .takedown h6, .setup body ul li, body ul .setup li, .takedown body ul li, body ul .takedown li {
         font-size: 110%; }
-      /* line 133, ../sass/global.scss */
-      .setup h3 {
+      /* line 140, ../sass/global.scss */
+      .setup h3, .takedown h3 {
         font-size: 2rem; } }
 
-/* line 144, ../sass/global.scss */
-[class*='info-box'] h2 {
-  font-size: 2rem;
-  color: yellow; }
-/* line 149, ../sass/global.scss */
-[class*='info-box'] p, [class*='info-box'] body h1, body [class*='info-box'] h1, [class*='info-box'] body h2, body [class*='info-box'] h2, [class*='info-box'] body h3, body [class*='info-box'] h3, [class*='info-box'] body h4, body [class*='info-box'] h4, [class*='info-box'] body h5, body [class*='info-box'] h5, [class*='info-box'] body h6, body [class*='info-box'] h6, [class*='info-box'] body ul li, body ul [class*='info-box'] li {
-  font-size: 135%;
-  padding-top: -1rem; }
-  /* line 152, ../sass/global.scss */
-  [class*='info-box'] p em, [class*='info-box'] body h1 em, body [class*='info-box'] h1 em, [class*='info-box'] body h2 em, body [class*='info-box'] h2 em, [class*='info-box'] body h3 em, body [class*='info-box'] h3 em, [class*='info-box'] body h4 em, body [class*='info-box'] h4 em, [class*='info-box'] body h5 em, body [class*='info-box'] h5 em, [class*='info-box'] body h6 em, body [class*='info-box'] h6 em, [class*='info-box'] body ul li em, body ul [class*='info-box'] li em {
-    color: yellow; }
-@media (min-width: 45rem) {
-  /* line 143, ../sass/global.scss */
-  [class*='info-box'] {
-    width: 33%;
-    float: right; } }
+/* line 146, ../sass/global.scss */
+.info {
+  overflow: hidden; }
+
+/* line 153, ../sass/global.scss */
+[class*='infobox-'] {
+  margin: 0 2em; }
+  /* line 155, ../sass/global.scss */
+  [class*='infobox-'] h2 {
+    font-size: 2rem;
+    color: yellow;
+    margin: 0 0 -1rem 2rem; }
+  /* line 160, ../sass/global.scss */
+  [class*='infobox-'] p, [class*='infobox-'] body h1, body [class*='infobox-'] h1, [class*='infobox-'] body h2, body [class*='infobox-'] h2, [class*='infobox-'] body h3, body [class*='infobox-'] h3, [class*='infobox-'] body h4, body [class*='infobox-'] h4, [class*='infobox-'] body h5, body [class*='infobox-'] h5, [class*='infobox-'] body h6, body [class*='infobox-'] h6, [class*='infobox-'] body ul li, body ul [class*='infobox-'] li {
+    font-size: 125%;
+    margin: 0 2 rem 0 1rem; }
+    /* line 163, ../sass/global.scss */
+    [class*='infobox-'] p em, [class*='infobox-'] body h1 em, body [class*='infobox-'] h1 em, [class*='infobox-'] body h2 em, body [class*='infobox-'] h2 em, [class*='infobox-'] body h3 em, body [class*='infobox-'] h3 em, [class*='infobox-'] body h4 em, body [class*='infobox-'] h4 em, [class*='infobox-'] body h5 em, body [class*='infobox-'] h5 em, [class*='infobox-'] body h6 em, body [class*='infobox-'] h6 em, [class*='infobox-'] body ul li em, body ul [class*='infobox-'] li em {
+      color: yellow; }
+  @media (min-width: 45rem) {
+    /* line 153, ../sass/global.scss */
+    [class*='infobox-'] {
+      margin: 0 0.35rem;
+      width: 32%;
+      float: left; }
+      /* line 172, ../sass/global.scss */
+      [class*='infobox-'] h2 {
+        text-align: center;
+        margin: 0 0 -1rem 0; }
+      /* line 176, ../sass/global.scss */
+      [class*='infobox-'] p, [class*='infobox-'] body h1, body [class*='infobox-'] h1, [class*='infobox-'] body h2, body [class*='infobox-'] h2, [class*='infobox-'] body h3, body [class*='infobox-'] h3, [class*='infobox-'] body h4, body [class*='infobox-'] h4, [class*='infobox-'] body h5, body [class*='infobox-'] h5, [class*='infobox-'] body h6, body [class*='infobox-'] h6, [class*='infobox-'] body ul li, body ul [class*='infobox-'] li {
+        margin-right: 1rem; } }
 
 /* GENERAL STYLES */

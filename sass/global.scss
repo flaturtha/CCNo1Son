@@ -42,8 +42,10 @@ section {
 }
 
 [class*='-wrap'] {
-  max-width: 60rem;
-  margin: 0 auto;
+  @media (min-width: 45rem) {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
   // border: 1px dashed pink;
 }
 
@@ -88,17 +90,18 @@ section {
     padding: 0.5rem 0 0 0;
   }
   ul li {
-    width: 95%;
+    width: 85%;
     font-size: 1.125rem;
     margin: 0 0 1rem 0;
   }
   @media (min-width: 45rem) {
     ul {
-      width: 80%;
+      // width: 100%;
       margin: 0 auto;
+      padding: 0 0 0 6rem;
     }
     ul li {
-      // width: 80%;
+      width: 100%;
       // text-align: center;
       font-size: 1.5rem;
     }
@@ -112,18 +115,22 @@ section {
 
 .setup {
   font-size: 90%;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 1rem;
+  // p:first-of-type, &:first-line {
+  //   font-size: 150%;
+  //   font-weight: 600;
+  // }
   h3 {
     font-size: 1.5rem;
     color: yellow;
   }
-  p:first-of-type {
-    &:first-line {
-      font-size: 150%;
-      font-weight: 600;
-    }
+  span {
+    color: red;
+    letter-spacing: 0.2rem;
+    font-variant: small-caps;
+    font-weight: 700;
+    padding: 0 0.25rem;
   }
-
   @media (min-width: 45rem) {
     max-width: 38rem;
     margin: 0 auto;
@@ -138,25 +145,43 @@ section {
 
 .info {
   @extend [class*='-wrap'];
+  // margin: 0.25rem 0;
+  // border: 3px solid red;
+  overflow: hidden;
 }
 
-[class*='info-box'] {
+[class*='infobox-'] {
+  margin: 0 2em;
   h2 {
     font-size: 2rem;
     color: yellow;
-    // padding-bottom: -1rem;
+    margin: 0 0 -1rem 2rem;
   }
   p {
-    font-size: 135%;
-    padding-top: -1rem;
+    font-size: 125%;
+    margin: 0 2 rem 0 1rem;
     em {
       color: yellow;
     }
   }
   @media (min-width: 45rem) {
-    width: 33%;
-    float: right;
+    margin: 0 0.35rem;
+    // border: 1px solid yellow;
+    width: 32%;
+    float: left;
+    h2 {
+      text-align: center;
+      margin: 0 0 -1rem 0;
+    }
+    p {
+      // text-align: justify;
+      margin-right: 1rem;
+    }
   }
+}
+
+.takedown {
+  @extend .setup;
 }
 
 /* GENERAL STYLES */
