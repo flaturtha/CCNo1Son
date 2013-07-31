@@ -10,6 +10,7 @@
 }
 
 html, body {
+  @extend .cf;
 }
 
 body {
@@ -35,6 +36,12 @@ body {
   text-align: center;
 }
 
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* SECTION STYLING */
 section {
   width: 100%;
@@ -52,11 +59,27 @@ section {
 .header-wrap {
   // border: 1px solid orange;
   .logo {
-    text-align: center;
+    // text-align: center;
     margin: 1rem 0;
+    @media (min-width: 45rem) {
+      float: left;
+    }
     // border: 1px solid red;
   }
+  .opening {
+    display: none;
+    @media (min-width: 45rem) {
+      display: inline;
+      float: right;
+      position: relative;
+      top: 4rem;
+      right: 5rem;
+    }
+  overflow: hidden;
+  }
 }
+
+
 
 .lede-wrap {
   p {
@@ -146,7 +169,9 @@ section {
 .info {
   @extend [class*='-wrap'];
   // margin: 0.25rem 0;
-  // border: 3px solid red;
+  border-top: 3px solid red;
+  border-bottom: 3px solid red;
+  padding: 0.5rem 0 0 0;
   overflow: hidden;
 }
 
@@ -182,6 +207,19 @@ section {
 
 .takedown {
   @extend .setup;
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: red;
+  }
+  @media (min-width: 45rem) {
+    h2 {
+      font-size: 5rem;
+    }
+  }
 }
 
 /* GENERAL STYLES */
