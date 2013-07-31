@@ -4,7 +4,7 @@
 
 ## We'll see about that &hellip; But, please, come on in. Grab a cold beverage and sit back while I explain what its all about.
 
-But first, let me introduce myself. Name's Finn. Well, the whole thing is Michael Thomas Henry McFinnly. But everyone just calls me Finn. I'm a PI and I specialize in literary mysteries &hellip; usually involving a murder.
+**But first, let me introduce myself.** Name's Finn. Well, the whole thing is Michael Thomas Henry McFinnly. But everyone just calls me Finn. I'm a PI and I specialize in literary mysteries &hellip; usually involving a murder.
 
 I've been retain by certain &hellip; uh &hellip; parties to recruit gumshoes for a new murder mystery short story website. Now, it doesn't really matter what *style* of gumshoe you are:
 
