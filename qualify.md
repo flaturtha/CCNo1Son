@@ -17,7 +17,7 @@ Whatever type of mystery you might be into, we've got your poison.
 
 What my client is building is a multi-genre library of the best murder mystery short stories and serialized novels available anywhere. And each story is designed to be read on whatever web-enabled device you've got handy&mdash;from that smartphone you carry with you *everywhere* to a tablet, laptop, desktop (don't worry, I won't snitch to your boss!), or even that flatscreen and game device if that's what floats your boat.
 
-But here's the kicker $rarr;
+But here's the kicker &rarr;
 
 ### Membership in this little club
 
